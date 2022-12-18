@@ -1,0 +1,22 @@
+---
+
+galaxy_info:
+  author: P. H. <github.com/perfide>
+  description: Deploy role-based authorized_keys files
+  license: BSD-2-Clause (BSD 2-Clause "Simplified" License)
+  license_url: https://spdx.org/licenses/BSD-2-Clause.html
+  min_ansible_version: 2.6
+  platforms:
+  - name: Debian
+    versions:
+    - bullseye
+  - name: Ubuntu
+    versions:
+    - jammy
+    - focal
+  galaxy_tags:
+  - ssh
+  - role
+  - authorized_keys
+
+...
