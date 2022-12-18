@@ -1,0 +1,13 @@
+# {{ ansible_managed }}
+{% for key in item['keys'] %}
+{%- if key.state is defined and key.state == 'absent' %}# {% endif %}
+{% if key.key_options is defined %}{{ key.key_options }} {% endif -%}
+{{ key.key }}
+{%- if key.date is defined %} {{ key.date }}{% endif %}
+{%- if key.comment is defined %} {{ key.comment }}{% endif %}
+
+{% endfor %}
+
+{# empty line #}
+# [EOF]
+{# empty line #}
