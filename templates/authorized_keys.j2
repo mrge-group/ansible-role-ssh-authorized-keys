@@ -1,5 +1,5 @@
 # {{ ansible_managed }}
-{% for key in item['keys'] %}
+{% for key in item['ssh_keys'] %}
 {%- if key.state is defined and key.state == 'absent' %}# {% endif %}
 {% if key.key_options is defined %}{{ key.key_options }} {% endif -%}
 {{ key.key }}
